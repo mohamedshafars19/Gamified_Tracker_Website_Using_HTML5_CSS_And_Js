@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Habit Tracker - History</title>
+    <link rel="icon" href="logo of shafar.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="50px" height="50px"></div>
+                    <div class="logo-text">Gamified Habit Tracker</div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="reward.html"><i class="fas fa-gift"></i> Rewards</a></li>
+                    <li><a href="history.html" class="active"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-dropdown">
+                        <span class="user-name">Shafar S</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="history.html"><i class="fas fa-history"></i> History</a>
+                            <div class="divider"></div>
+                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- History Section -->
+    <section class="history-section">
+        <div class="container">
+            <div class="history-header">
+                <h1><i class="fas fa-history"></i> Activity History</h1>
+                <p>Track your points, rewards, and activities history.</p>
+                
+                <div class="history-summary">
+                    <div class="summary-card">
+                        <h3>Total Points Earned</h3>
+                        <p class="summary-value">24,500</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Total Points Redeemed</h3>
+                        <p class="summary-value">11,650</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Rewards Claimed</h3>
+                        <p class="summary-value">14</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="history-filters">
+                <div class="filter-group">
+                    <label for="time-filter"><i class="fas fa-calendar-alt"></i> Time Period:</label>
+                    <select id="time-filter">
+                        <option value="all">All Time</option>
+                        <option value="month">This Month</option>
+                        <option value="week">This Week</option>
+                        <option value="today">Today</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="type-filter"><i class="fas fa-filter"></i> Activity Type:</label>
+                    <select id="type-filter">
+                        <option value="all">All Activities</option>
+                        <option value="earned">Points Earned</option>
+                        <option value="redeemed">Rewards Redeemed</option>
+                        <option value="bonus">Bonuses</option>
+                    </select>
+                </div>
+                
+                <button class="btn-export">
+                    <i class="fas fa-download"></i> Export History
+                </button>
+            </div>
+            
+            <!-- History Timeline -->
+            <div class="history-timeline">
+                <h2><i class="fas fa-stream"></i> Recent Activity Timeline</h2>
+                
+                <div class="timeline">
+                    <!-- Today -->
+                    <div class="timeline-date">
+                        <h3>Today</h3>
+                    </div>
+                    
+                    <div class="timeline-item earned">
+                        <div class="timeline-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Survey Completed: Tech Preferences</h4>
+                            <p class="timeline-time">2:45 PM</p>
+                            <p class="timeline-description">Completed a 15-minute survey about technology usage patterns.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+50 points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item earned">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Daily Check-in</h4>
+                            <p class="timeline-time">9:30 AM</p>
+                            <p class="timeline-description">Checked in for the 24th consecutive day.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+25 points</span>
+                                <span class="streak-badge">24 Day Streak</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Yesterday -->
+                    <div class="timeline-date">
+                        <h3>Yesterday</h3>
+                    </div>
+                    
+                    <div class="timeline-item redeemed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Reward Redeemed: $10 Amazon Gift Card</h4>
+                            <p class="timeline-time">5:20 PM</p>
+                            <p class="timeline-description">Successfully redeemed 1,000 points for a $10 Amazon gift card.</p>
+                            <div class="timeline-points">
+                                <span class="points-redeemed">-1,000 points</span>
+                                <span class="status processing">Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item earned">
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Friend Referral Bonus</h4>
+                            <p class="timeline-time">3:15 PM</p>
+                            <p class="timeline-description">Your friend Sarah signed up using your referral code.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+500 points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- This Week -->
+                    <div class="timeline-date">
+                        <h3>This Week</h3>
+                    </div>
+                    
+                    <div class="timeline-item bonus">
+                        <div class="timeline-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Weekly Bonus</h4>
+                            <p class="timeline-time">Monday, 10:00 AM</p>
+                            <p class="timeline-description">Weekly activity bonus for completing 5+ tasks last week.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+100 points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item earned">
+                        <div class="timeline-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Partner Purchase: Walmart</h4>
+                            <p class="timeline-time">Sunday, 2:30 PM</p>
+                            <p class="timeline-description">Earned points for shopping at Walmart through our portal.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+350 points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item redeemed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Reward Redeemed: Starbucks $5 Card</h4>
+                            <p class="timeline-time">Saturday, 11:45 AM</p>
+                            <p class="timeline-description">Redeemed 500 points for a $5 Starbucks gift card.</p>
+                            <div class="timeline-points">
+                                <span class="points-redeemed">-500 points</span>
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Last Month -->
+                    <div class="timeline-date">
+                        <h3>Last Month</h3>
+                    </div>
+                    
+                    <div class="timeline-item earned">
+                        <div class="timeline-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Level Up: Gold Member</h4>
+                            <p class="timeline-time">October 28, 4:20 PM</p>
+                            <p class="timeline-description">Congratulations! You've reached Gold member status.</p>
+                            <div class="timeline-points">
+                                <span class="points-earned">+1,000 bonus points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item redeemed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Cash Reward: $25 PayPal</h4>
+                            <p class="timeline-time">October 15, 10:30 AM</p>
+                            <p class="timeline-description">Redeemed 2,800 points for $25 PayPal cash.</p>
+                            <div class="timeline-points">
+                                <span class="points-redeemed">-2,800 points</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="page-dots">...</span>
+                    <button class="page-btn">10</button>
+                    <button class="page-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Reward History Summary -->
+            <div class="rewards-history">
+                <h2><i class="fas fa-award"></i> Rewards History</h2>
+                <div class="rewards-table-container">
+                    <table class="rewards-table">
+                        <thead>
+                            <tr>
+                                <th>Reward</th>
+                                <th>Date Redeemed</th>
+                                <th>Points Used</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="reward-info">
+                                        <div class="reward-icon-small">
+                                            <i class="fab fa-amazon"></i>
+                                        </div>
+                                        <div>
+                                            <h4>$10 Amazon Gift Card</h4>
+                                            <p>Code: AMZ-XXXX-XXXX</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Oct 30, 2023</td>
+                                <td><span class="points-used">1,000</span></td>
+                                <td><span class="status processing">Processing</span></td>
+                                <td><button class="btn-view">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="reward-info">
+                                        <div class="reward-icon-small">
+                                            <i class="fas fa-coffee"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Starbucks $5 Card</h4>
+                                            <p>Code: STAR-XXXX-XXXX</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Oct 22, 2023</td>
+                                <td><span class="points-used">500</span></td>
+                                <td><span class="status delivered">Delivered</span></td>
+                                <td><button class="btn-view">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="reward-info">
+                                        <div class="reward-icon-small">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                        <div>
+                                            <h4>$25 PayPal Cash</h4>
+                                            <p>Transaction: PP-XXXX-XXXX</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Oct 15, 2023</td>
+                                <td><span class="points-used">2,800</span></td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><button class="btn-view">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="reward-info">
+                                        <div class="reward-icon-small">
+                                            <i class="fab fa-google-play"></i>
+                                        </div>
+                                        <div>
+                                            <h4>$15 Google Play Card</h4>
+                                            <p>Code: GP-XXXX-XXXX</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Oct 5, 2023</td>
+                                <td><span class="points-used">1,500</span></td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><button class="btn-view">View Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="60px" height="60px"></div>
+                        <div class="logo-text">Gamified Habit Tracker</div>
+                    </a>
+                    <p>Earn rewards for your everyday activities. Join our community today!</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61587729536393" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/shasx_hector/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-shafar-s-0b8b9a386/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="reward.html">Rewards</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="settings.html">Account Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Habit Tracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Shared authentication script -->
+    <script src="js/auth.js"></script>
+    <!-- History page specific script -->
+    <script src="js/history.js"></script>
+</body>
+</html>
+</body>
+</html>

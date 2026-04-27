@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Habit Tracker - Settings</title>
+    <link rel="icon" href="logo of shafar.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="50px" height="50px"></div>
+                    <div class="logo-text">Gamified Habit Tracker</div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="reward.html"><i class="fas fa-gift"></i> Rewards</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-dropdown">
+                        <span class="user-name">Md Shafar</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="history.html"><i class="fas fa-history"></i> History</a>
+                            <div class="divider"></div>
+                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Settings Section -->
+    <section class="settings-section">
+        <div class="container">
+            <div class="settings-header">
+                <h1><i class="fas fa-cog"></i> Account Settings</h1>
+                <p>Manage your account preferences and security settings.</p>
+            </div>
+            
+            <div class="settings-container">
+                <!-- Settings Sidebar -->
+                <div class="settings-sidebar">
+                    <div class="sidebar-nav">
+                        <button class="sidebar-btn active" data-tab="profile">
+                            <i class="fas fa-user"></i> Profile
+                        </button>
+                        <button class="sidebar-btn" data-tab="security">
+                            <i class="fas fa-shield-alt"></i> Security
+                        </button>
+                        <button class="sidebar-btn" data-tab="notifications">
+                            <i class="fas fa-bell"></i> Notifications
+                        </button>
+                        <button class="sidebar-btn" data-tab="privacy">
+                            <i class="fas fa-lock"></i> Privacy
+                        </button>
+                        <button class="sidebar-btn" data-tab="preferences">
+                            <i class="fas fa-sliders-h"></i> Preferences
+                        </button>
+                        <button class="sidebar-btn" data-tab="billing">
+                            <i class="fas fa-credit-card"></i> Billing
+                        </button>
+                        <button class="sidebar-btn" data-tab="connected">
+                            <i class="fas fa-link"></i> Connected Apps
+                        </button>
+                    </div>
+                    
+                    <div class="sidebar-help">
+                        <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
+                        <p>Check our FAQ or contact support for assistance.</p>
+                        <a href="#" class="btn-help">Contact Support</a>
+                    </div>
+                </div>
+                
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Profile Tab -->
+                    <div class="settings-tab active" id="profile-tab">
+                        <h2><i class="fas fa-user"></i> Profile Information</h2>
+                        <p>Update your personal information and how others see you on RewardHub.</p>
+                        
+                        <form class="settings-form">
+                            <div class="form-section">
+                                <h3>Basic Information</h3>
+                                
+                                <div class="avatar-upload">
+                                    <div class="avatar-preview">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="avatar-controls">
+                                        <button type="button" class="btn-upload">Upload Photo</button>
+                                        <button type="button" class="btn-remove">Remove</button>
+                                        <p class="avatar-hint">Recommended: Square JPG, PNG at least 400x400px</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" value="Shafar">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" id="last-name" value="S">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="display-name">Display Name</label>
+                                    <input type="text" id="display-name" value="shafars519">
+                                    <p class="form-hint">This is how your name will appear to other users.</p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="shafarshafar519@example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+91 9025475313">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="birthdate">Date of Birth</label>
+                                    <input type="date" id="birthdate" value="2007-06-19">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <select id="country">
+                                        <option value="us" selected>United States</option>
+                                        <option value="ca">Canada</option>
+                                        <option value="uk">United Kingdom</option>
+                                        <option value="au">Australia</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Bio & About</h3>
+                                <div class="form-group">
+                                    <label for="bio">Bio</label>
+                                    <textarea id="bio" rows="4" placeholder="Tell us a little about yourself...">Reward enthusiast who loves earning points for everyday activities. Always looking for the next great reward!</textarea>
+                                    <p class="form-hint">Maximum 500 characters.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-cancel">Cancel</button>
+                                <button type="submit" class="btn-save">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Security Tab -->
+                    <div class="settings-tab" id="security-tab">
+                        <h2><i class="fas fa-shield-alt"></i> Security Settings</h2>
+                        <p>Manage your password, two-factor authentication, and security preferences.</p>
+                        
+                        <div class="security-sections">
+                            <div class="security-section">
+                                <h3>Change Password</h3>
+                                <form class="password-form">
+                                    <div class="form-group">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" id="current-password">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="new-password">New Password</label>
+                                        <input type="password" id="new-password">
+                                        <div class="password-strength">
+                                            <div class="strength-meter">
+                                                <div class="strength-bar"></div>
+                                            </div>
+                                            <span class="strength-text">Password strength: <span id="strengthValue">Weak</span></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirm New Password</label>
+                                        <input type="password" id="confirm-password">
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn-save">Update Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="security-section">
+                                <h3>Two-Factor Authentication</h3>
+                                <div class="two-factor-status">
+                                    <div class="status-indicator disabled"></div>
+                                    <div class="status-text">
+                                        <h4>2FA is currently disabled</h4>
+                                        <p>Add an extra layer of security to your account.</p>
+                                    </div>
+                                </div>
+                                <button class="btn-enable-2fa">Enable Two-Factor Authentication</button>
+                            </div>
+                            
+                            <div class="security-section">
+                                <h3>Active Sessions</h3>
+                                <div class="sessions-list">
+                                    <div class="session-item current">
+                                        <div class="session-icon">
+                                            <i class="fas fa-desktop"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <h4>Windows 10 • Chrome</h4>
+                                            <p>New York, USA • Current Session</p>
+                                            <p class="session-time">Last active: Just now</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="session-item">
+                                        <div class="session-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <h4>iOS • Safari</h4>
+                                            <p>New York, USA</p>
+                                            <p class="session-time">Last active: 2 hours ago</p>
+                                        </div>
+                                        <button class="btn-logout-session">Log Out</button>
+                                    </div>
+                                    
+                                    <div class="session-item">
+                                        <div class="session-icon">
+                                            <i class="fas fa-desktop"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <h4>MacOS • Firefox</h4>
+                                            <p>San Francisco, USA</p>
+                                            <p class="session-time">Last active: 3 days ago</p>
+                                        </div>
+                                        <button class="btn-logout-session">Log Out</button>
+                                    </div>
+                                </div>
+                                <button class="btn-logout-all">Log Out Of All Other Sessions</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notifications Tab -->
+                    <div class="settings-tab" id="notifications-tab">
+                        <h2><i class="fas fa-bell"></i> Notification Preferences</h2>
+                        <p>Choose how and when you want to be notified about activities and rewards.</p>
+                        
+                        <div class="notifications-sections">
+                            <div class="notification-category">
+                                <h3>Email Notifications</h3>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Rewards & Offers</h4>
+                                        <p>New rewards, limited-time offers, and bonus opportunities.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Account Activity</h4>
+                                        <p>Points earned, rewards redeemed, and account updates.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Newsletter & Tips</h4>
+                                        <p>Weekly tips, success stories, and platform updates.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-category">
+                                <h3>Push Notifications</h3>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Daily Check-in Reminder</h4>
+                                        <p>Remind me to check in daily for bonus points.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>New Reward Alerts</h4>
+                                        <p>Notify me when new rewards are available.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Point Expiration Warnings</h4>
+                                        <p>Alert me before my points expire.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-category">
+                                <h3>SMS Notifications</h3>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Security Alerts</h4>
+                                        <p>Important security notifications about my account.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="notification-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Large Reward Redemptions</h4>
+                                        <p>Notify me when redeeming high-value rewards.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-cancel">Reset to Default</button>
+                                <button type="button" class="btn-save">Save Notification Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy Tab -->
+                    <div class="settings-tab" id="privacy-tab">
+                        <h2><i class="fas fa-lock"></i> Privacy Settings</h2>
+                        <p>Control your privacy and how your information is shared.</p>
+                        
+                        <div class="privacy-sections">
+                            <div class="privacy-section">
+                                <h3>Profile Visibility</h3>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Public Profile</h4>
+                                        <p>Allow other users to view your profile and achievements.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Show Point Balance</h4>
+                                        <p>Display your point balance on your public profile.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Show Activity Feed</h4>
+                                        <p>Share your recent activities and rewards with others.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="privacy-section">
+                                <h3>Data Sharing</h3>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Share Analytics Data</h4>
+                                        <p>Help us improve by sharing anonymous usage data.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Personalized Offers</h4>
+                                        <p>Receive personalized rewards and offers based on your activity.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="privacy-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Third-Party Partners</h4>
+                                        <p>Allow trusted partners to offer you relevant rewards.</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="privacy-actions">
+                                <a href="#" class="btn-download-data">
+                                    <i class="fas fa-download"></i> Download My Data
+                                </a>
+                                <button class="btn-delete-account">
+                                    <i class="fas fa-trash-alt"></i> Delete Account
+                                </button>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-save">Save Privacy Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="60px" height="60px"></div>
+                        <div class="logo-text">Gamified Habit Tracker</div>
+                    </a>
+                    <p>Earn rewards for your everyday activities. Join our community today!</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61587729536393" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/shasx_hector/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-shafar-s-0b8b9a386/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="reward.html">Rewards</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="settings.html">Account Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Habit Tracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Shared authentication script -->
+    <script src="js/auth.js"></script>
+    <!-- Settings page specific script -->
+    <script src="js/settings.js"></script>
+</body>
+</html>
+</body>
+</html>

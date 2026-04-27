@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Habit Tracker - Dashboard</title>
+    <link rel="icon" href="logo of shafar.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="50px" height="50px"></div>
+                    <div class="logo-text">Gamified Habit Tracker</div>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="reward.html"><i class="fas fa-gift"></i> Rewards</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-dropdown">
+                        <span class="user-name">Shafar S</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="history.html"><i class="fas fa-history"></i> History</a>
+                            <div class="divider"></div>
+                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>My Dashboard</h1>
+                <p>Welcome back, Shafar S! Here's your reward summary and activity.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Stats Cards -->
+                <div class="stats-card total-points">
+                    <div class="stats-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stats-content">
+                        <h3>Total Points</h3>
+                        <p class="stats-value">12,850</p>
+                        <p class="stats-change"><i class="fas fa-arrow-up"></i> 450 this week</p>
+                    </div>
+                </div>
+
+                <div class="stats-card available-rewards">
+                    <div class="stats-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="stats-content">
+                        <h3>Available Rewards</h3>
+                        <p class="stats-value">8</p>
+                        <p class="stats-change"><a href="reward.html">View all rewards</a></p>
+                    </div>
+                </div>
+
+                <div class="stats-card level">
+                    <div class="stats-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stats-content">
+                        <h3>Current Level</h3>
+                        <p class="stats-value">Gold Member</p>
+                        <p class="stats-change">150 points to Platinum</p>
+                    </div>
+                </div>
+
+                <div class="stats-card streak">
+                    <div class="stats-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stats-content">
+                        <h3>Login Streak</h3>
+                        <p class="stats-value">24 Days</p>
+                        <p class="stats-change">Keep it up!</p>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions card">
+                    <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                    <div class="actions-grid">
+                        <a href="#" class="action-item">
+                            <div class="action-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Daily Check-in</span>
+                        </a>
+                        <a href="#" class="action-item">
+                            <div class="action-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <span>Complete Survey</span>
+                        </a>
+                        <a href="reward.html" class="action-item">
+                            <div class="action-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <span>Redeem Rewards</span>
+                        </a>
+                        <a href="#" class="action-item">
+                            <div class="action-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <span>Refer Friends</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="recent-activity card">
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Survey Completed</h4>
+                                <p>Just now • +50 points</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Daily Check-in</h4>
+                                <p>Today at 9:30 AM • +10 points</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon reward">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Reward Redeemed</h4>
+                                <p>Yesterday • $10 Amazon Gift Card</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Friend Referral</h4>
+                                <p>2 days ago • +200 points</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="history.html" class="view-all">View All Activity</a>
+                </div>
+
+                <!-- Progress to Next Level -->
+                <div class="level-progress card">
+                    <h3><i class="fas fa-chart-line"></i> Progress to Next Level</h3>
+                    <div class="progress-container">
+                        <div class="progress-labels">
+                            <span>Gold Member</span>
+                            <span>Platinum Member</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <p>You need 150 more points to reach Platinum level.</p>
+                        </div>
+                    </div>
+                    <div class="level-benefits">
+                        <h4>Platinum Benefits:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 2x points on all activities</li>
+                            <li><i class="fas fa-check"></i> Exclusive rewards</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Available Rewards -->
+                <div class="available-rewards card">
+                    <h3><i class="fas fa-gift"></i> Available Rewards</h3>
+                    <div class="rewards-grid">
+                        <div class="reward-item">
+                            <div class="reward-icon">
+                                <i class="fab fa-amazon"></i>
+                            </div>
+                            <div class="reward-details">
+                                <h4>$10 Amazon Gift Card</h4>
+                                <p class="reward-points">1,000 points</p>
+                            </div>
+                            <button class="btn-redeem">Redeem</button>
+                        </div>
+                        <div class="reward-item">
+                            <div class="reward-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="reward-details">
+                                <h4>Starbucks $5 Card</h4>
+                                <p class="reward-points">500 points</p>
+                            </div>
+                            <button class="btn-redeem">Redeem</button>
+                        </div>
+                    </div>
+                    <a href="reward.html" class="view-all">View All Rewards</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><img src="logo of shafar.png" alt="Logo" width="60px" height="60px">
+                        </div>
+                        <div class="logo-text">Gamified Habit Tracker</div>
+                    </a>
+                    <p>Earn rewards for your everyday activities. Join our community today!</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61587729536393" class="social-icon"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/shasx_hector/" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-shafar-s-0b8b9a386/" class="social-icon"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="reward.html">Rewards</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="settings.html">Account Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Habit Tracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Shared authentication script -->
+    <script src="js/auth.js"></script>
+    <!-- Dashboard specific script -->
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
